@@ -2,23 +2,23 @@
 
 ## 真机测试效果图预览
 
-<div style="display:flex;flex-wrap:wrap;justify-content:space-around">
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\首页.jpg" style="zoom:25%;"/>
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151221_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151310_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151643_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151318_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151326_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151353_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151402_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151417_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151424_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151435_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151447_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151456_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151517_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_135224_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="D:\千锋前端22期\3阶段\专题17：小程序实战\day09-项目-选座-微信授权-短信验证\项目笔记\images\Screenshot_20230722_151632_com.tencent.mm.jpg" style="zoom:25%;" /></div>
+<img src="./images/首页.jpg" style="zoom:25%;">
+<img src="./images/Screenshot_20230722_151221_com.tencent.mm.jpg" style="zoom:25%;">
+    <img src="./images/Screenshot_20230722_151310_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151643_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151318_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151326_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151353_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151402_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151417_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151424_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151435_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151447_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151456_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151517_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_135224_com.tencent.mm.jpg" style="zoom:25%;" />
+    <img src="./images/Screenshot_20230722_151632_com.tencent.mm.jpg" style="zoom:25%;" />
+
 
 
 ## 1.app全局配置
