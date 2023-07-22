@@ -2,11 +2,11 @@
 
 ## 真机测试效果图预览
 
-<img src="./images/首页.jpg" style="width:200px">
-<img src="./images/Screenshot_20230722_151221_com.tencent.mm.jpg"  style="width:200px">
-    <img src="./images/Screenshot_20230722_151310_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="./images/Screenshot_20230722_151643_com.tencent.mm.jpg" style="zoom:25%;" />
-    <img src="./images/Screenshot_20230722_151318_com.tencent.mm.jpg" style="zoom:25%;" />
+<div style="display:flex;justify-content:center;flex-wrap:wrap">
+    <img src="./images/首页.jpg" style="zoom:25%;">
+    <img src="./images/Screenshot_20230722_151221_com.tencent.mm.jpg"  style="zoom:25%;">
+    <img src="./images/Screenshot_20230722_151310_com.tencent.mm.jpg" style="zoom:25%;"/>	 <img src="./images/Screenshot_20230722_151643_com.tencent.mm.jpg" style="zoom:25%;"/>
+	<img src="./images/Screenshot_20230722_151318_com.tencent.mm.jpg" style="zoom:25%;" />
     <img src="./images/Screenshot_20230722_151326_com.tencent.mm.jpg" style="zoom:25%;" />
     <img src="./images/Screenshot_20230722_151353_com.tencent.mm.jpg" style="zoom:25%;" />
     <img src="./images/Screenshot_20230722_151402_com.tencent.mm.jpg" style="zoom:25%;" />
@@ -18,6 +18,9 @@
     <img src="./images/Screenshot_20230722_151517_com.tencent.mm.jpg" style="zoom:25%;" />
     <img src="./images/Screenshot_20230722_135224_com.tencent.mm.jpg" style="zoom:25%;" />
     <img src="./images/Screenshot_20230722_151632_com.tencent.mm.jpg" style="zoom:25%;" />
+</div>
+
+​    
 
 
 
