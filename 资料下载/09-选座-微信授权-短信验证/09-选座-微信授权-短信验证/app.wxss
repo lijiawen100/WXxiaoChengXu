@@ -1,0 +1,202 @@
+/* 全局样式  colorUI */
+
+/* 文字颜色 */
+.c-e22 {
+  color: #e22d2c;
+}
+.c-333 {
+  color: #333;
+}
+.c-999 {
+  color: #999;
+}
+.c-fff {
+  color: #fff;
+}
+.c-daa {
+  color: #daa000;
+}
+.c-659 {
+  color: #6599fe;
+}
+/* 文字大小 */
+.fs-25 {
+  font-size: 25rpx;
+}
+.fs-27 {
+  font-size: 27rpx;
+}
+.fs-30 {
+  font-size: 30rpx;
+}
+.fs-35 {
+  font-size: 35rpx;
+}
+.fs-40 {
+  font-size: 40rpx;
+}
+.fs-50 {
+  font-size: 50rpx;
+}
+
+/* 文字加强 */
+.fw {
+  font-weight: bold;
+}
+.fw-200 {
+  font-weight: 200;
+}
+
+/* 背景颜色 */
+.bg-e22 {
+  background-color: #e22d2c;
+}
+.bg-efe {
+  background-color: #efefef;
+}
+.bg-fff {
+  background-color: #fff;
+}
+.bg-659 {
+  background-color: #6599fe;
+}
+.bg-daa {
+  background-color: #daa000;
+}
+
+/* 圆角 */
+.br-5 {
+  border-radius: 5rpx;
+}
+.br-10 {
+  border-radius: 10rpx;
+}
+.br-15 {
+  border-radius: 15rpx;
+}
+.br-20 {
+  border-radius: 20rpx;
+}
+.br-30 {
+  border-radius: 30rpx;
+}
+.br-40 {
+  border-radius: 40rpx;
+}
+.br-circ {
+  border-radius: 50%;
+}
+
+/* 外边距 */
+.m-10 {
+  margin: 10rpx;
+}
+.ml-10 {
+  margin-left: 10rpx;
+}
+.mt-10 {
+  margin-top: 10rpx;
+}
+.mb-10 {
+  margin-bottom: 10rpx;
+}
+.mr-10 {
+  margin-right: 10rpx;
+}
+
+.m-20 {
+  margin: 20rpx;
+}
+.ml-20 {
+  margin-left: 20rpx;
+}
+.mr-20 {
+  margin-right: 20rpx;
+}
+.mt-20 {
+  margin-top: 20rpx;
+}
+.mb-20 {
+  margin-bottom: 20rpx;
+}
+/* 内边距 */
+
+.p-10 {
+  padding: 10rpx;
+}
+.pl-10 {
+  padding-left: 10rpx;
+}
+.pr-10 {
+  padding-right: 10rpx;
+}
+.pt-10 {
+  padding-top: 10rpx;
+}
+.pb-10 {
+  padding-bottom: 10rpx;
+}
+.p-20 {
+  padding: 20rpx;
+}
+.pl-20 {
+  padding-left: 20rpx;
+}
+.pr-20 {
+  padding-right: 20rpx;
+}
+.pt-20 {
+  padding-top: 20rpx;
+}
+.pb-20 {
+  padding-bottom: 20rpx;
+}
+
+.p-5-15 {
+  padding: 5rpx 15rpx;
+}
+.p-10-25 {
+  padding: 10rpx 25rpx;
+}
+.p-5-30 {
+  padding: 5rpx 30rpx;
+}
+
+/* 文字居中 */
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
+
+/* 一像素高清边框 */
+
+.bd-b-1 {
+  position: relative;
+  /* border-bottom: 1rpx solid #999; */
+}
+.bd-b-1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+  transform: scaleY(0.5);
+}
+
+.bd-r-1 {
+  position: relative;
+}
+.bd-r-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #999;
+  transform: scaleX(0.5);
+}

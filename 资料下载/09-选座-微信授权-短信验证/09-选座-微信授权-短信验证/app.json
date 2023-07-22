@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cinemas/cinemas",
+    "pages/cinema/cinema",
+    "pages/films/films",
+    "pages/orders/orders",
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/map/map",
+    "pages/film/film",
+    "pages/ticketing-cinema/ticketing-cinema",
+    "pages/seat-selection/seat-selection",
+    "pages/authorize/authorize",
+    "pages/phone/phone"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e22d2c",
+    "navigationBarTitleText": "XX电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#e22d2c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-active.png"
+      },
+
+      {
+        "pagePath": "pages/cinemas/cinemas",
+        "text": "影院",
+        "iconPath": "images/cinema.png",
+        "selectedIconPath": "images/cinema-active.png"
+      },
+      {
+        "pagePath": "pages/films/films",
+        "text": "电影",
+        "iconPath": "images/film.png",
+        "selectedIconPath": "images/film-active.png"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "status-bar": "components/status-bar/status-bar",
+    "card": "components/card/card",
+    "search": "components/search/search"
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.19",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于XX电影定位"
+    }
+  }
+}

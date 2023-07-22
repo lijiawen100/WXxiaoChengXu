@@ -1,0 +1,54 @@
+.filter {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  z-index: 1;
+}
+.filter .title {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: 84rpx;
+  align-items: center;
+}
+.filter .modal {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.brand {
+  height: 50vh;
+}
+
+.hall-tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hall-tag .default {
+  border: 1rpx solid #ccc;
+  margin: 20rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+.hall-tag .active {
+  border: 1px solid #e22d2c;
+  color: #e22d2c;
+  background-color: #ffc8c8;
+}
+.list {
+  margin-top: 84rpx;
+}
+.list .name,
+.list .address {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list .service .s0 {
+  border: 1rpx solid #6699ff;
+  color: #6699ff;
+}
+.list .service .s1 {
+  border: 1rpx solid #ee9900;
+  color: #ee9900;
+}

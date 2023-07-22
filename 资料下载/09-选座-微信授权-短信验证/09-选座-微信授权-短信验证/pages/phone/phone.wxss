@@ -1,0 +1,12 @@
+.phone {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.phone .yzm {
+  display: flex;
+  align-items: center;
+}
+.phone .yzm .input {
+  flex: 1;
+}

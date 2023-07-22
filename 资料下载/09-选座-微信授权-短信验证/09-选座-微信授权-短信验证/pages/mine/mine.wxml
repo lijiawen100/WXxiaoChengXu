@@ -1,0 +1,10 @@
+<view class="mine">
+  <view class="avatar">
+    <image class="icon br-circ" src="{{user.avatarUrl}}"></image>
+    <view class="mt-20 c-999 fs-30">{{user.nickName}}</view>
+  </view>
+  <view class="tel" wx:if="{{user.tel===null}}">
+    <button class="bg-e22 c-fff" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机</button>
+  </view>
+  <view wx:else>{{user.tel}}</view>
+</view>

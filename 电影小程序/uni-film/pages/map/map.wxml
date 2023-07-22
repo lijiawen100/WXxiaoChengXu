@@ -1,0 +1,4 @@
+<map class="map" longitude="{{lng}}" latitude="{{lat}}" markers="{{markers}}"></map>
+<view class="routeplan bg-fff t-center p-20">
+  <text class="text fs-35 bg-e22 p-10-25 br-10 c-fff" bindtap="gotomap">到这里去</text>
+</view>

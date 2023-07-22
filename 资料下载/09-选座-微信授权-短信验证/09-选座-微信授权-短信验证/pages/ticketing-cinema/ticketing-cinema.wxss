@@ -1,0 +1,44 @@
+.poster {
+  display: flex;
+  align-items: center;
+}
+
+.poster .thumb {
+  height: 200rpx;
+  width: 120rpx;
+}
+
+.poster .des {
+  flex: 1;
+}
+
+.cinema {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cinema .watch {
+  flex-shrink: 0;
+}
+
+.scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 100rpx;
+}
+
+.scene .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scene .info .pay {
+  border: solid 3rpx #e22d2c;
+}
+/* pages/ticketing-cinema/ticketing-cinema.wxss */

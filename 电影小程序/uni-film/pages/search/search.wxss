@@ -1,0 +1,25 @@
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar .search-input {
+  display: flex;
+  flex: 0.93;
+}
+.searchHistory {
+  margin-top: 60rpx;
+}
+.classify {
+  display: flex;
+  justify-content: space-around;
+}
+.del {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.del .image {
+  width: 30rpx;
+  height: 30rpx;
+}

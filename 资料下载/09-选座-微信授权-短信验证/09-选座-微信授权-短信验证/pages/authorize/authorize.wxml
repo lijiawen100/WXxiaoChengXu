@@ -1,0 +1,5 @@
+<view class="authorize">
+  <view class="fs-30 fw c-333">统一授权使用微信图形、昵称等信息</view>
+  <view class="fs-30 c-999">我们承诺只使用于小程序中呈现您的信息</view>
+  <text class="bg-e22 c-fff p-5-30 br-10" bindtap="userAuthorize">授权</text>
+</view>

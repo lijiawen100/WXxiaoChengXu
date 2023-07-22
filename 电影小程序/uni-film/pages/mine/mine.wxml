@@ -1,0 +1,14 @@
+<view class="mine">
+  <!-- 用户信息 -->
+  <view class="userInfo">
+    <image src="{{user.avatarUrl}}" class="image br-circ" />
+    <view class="c-999 fs-30 mt-20">{{user.nickName}}</view>
+  </view>
+  <!-- 绑定手机号 -->
+  <view class="phone">
+    <view wx:if="{{user.tel}}" class="t-center">{{user.tel}}</view>
+    <view wx:else>
+      <button class="bg-e22 c-fff fw fs-35" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机</button>
+    </view>
+  </view>
+</view>

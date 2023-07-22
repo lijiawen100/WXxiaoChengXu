@@ -1,0 +1,68 @@
+.films .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+.filter {
+  position: relative;
+}
+.filter .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+}
+.filter .title .artw {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.filter .modal {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.filter .content {
+  position: absolute;
+  width: 83vw;
+  height: 83vh;
+  right: -83vw;
+  transition: right ease 0.2s;
+}
+.filter .content.active {
+  right: 0;
+}
+.filter .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter .item .default {
+  border: 1rpx solid #999;
+}
+.filter .item .active {
+  border: 1rpx solid #e22d2c;
+  color: #e22d2c;
+  background-color: #f8cfcf;
+}
+
+
+.film {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.film .thumb {
+  width: 165rpx;
+  height: 230rpx;
+}
+.film .info {
+  flex: 1;
+}
+.film .pay {
+  position: absolute;
+  right: 20rpx;
+}

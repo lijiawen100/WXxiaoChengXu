@@ -1,0 +1,62 @@
+.seat-select .cinema {
+  display: flex;
+  align-items: center;
+}
+.seat-select .right {
+  width: 50rpx;
+  height: 50rpx;
+  flex-shrink: 0;
+}
+
+.film {
+  display: flex;
+}
+
+.film .poster {
+  height: 200rpx;
+  width: 150rpx;
+}
+
+.film .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.illustration {
+  display: flex;
+  justify-content: space-around;
+}
+
+.illustration .item {
+  display: flex;
+}
+.illustration .item .icon {
+  height: 40rpx;
+}
+
+.scene .monitor {
+  padding-bottom: 80rpx;
+}
+.scene .monitor .image {
+  height: 40rpx;
+}
+
+.scene .seat-info .row {
+  display: flex;
+  justify-content: center;
+}
+.scene .seat-info .image,
+.scene .seat-info .empty {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

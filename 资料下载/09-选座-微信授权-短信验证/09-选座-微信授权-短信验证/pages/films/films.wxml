@@ -1,0 +1,61 @@
+<view class="films bg-fff" style="padding-top:{{headerHeight}}px">
+  <view class="header bg-e22" id="header">
+    <view class="bd-b-1">
+      <status-bar></status-bar>
+      <search></search>
+      <!-- 过滤条 -->
+      <view class="filter pl-20 pr-20">
+        <view class="title c-fff fs-30" bindtap="showModal">
+          <text>{{cateIndex===-1?'全部类型':cateList[cateIndex].cateName}} - {{regIndex===-1?'所有地区':regList[regIndex].filmReName}} - {{yearIndex===-1?'所有年份':yearList[yearIndex]}}</text>
+          <image src="/images/artw.png" class="artw" />
+        </view>
+        <!-- modal背景 -->
+        <view class="modal" wx:if="{{show}}" bindtap="showModal"></view>
+        <!-- modal内容 -->
+        <scroll-view scroll-y class="content bg-fff {{show ? 'active' : ''}}">
+          <!-- 类型 -->
+          <view class="p-20">
+            <view class="fs-30 fw c-333 pb-20">类型：</view>
+            <view class="item pl-20">
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{cateIndex===-1 ? 'active' : ''}}" bindtap="selectCate" data-index="{{-1}}">全部</text>
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{cateIndex===index ? 'active' : ''}}" wx:for="{{cateList}}" wx:key="index" bindtap="selectCate" data-index="{{index}}">{{item.cateName}}</text>
+            </view>
+          </view>
+          <!-- 地区 -->
+          <view class="p-20">
+            <view class="fs-30 fw c-333 pb-20">地区：</view>
+            <view class="item pl-20">
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{regIndex===-1 ? 'active' : ''}}" bindtap="selectReg" data-index="{{-1}}">全部</text>
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{regIndex===index ? 'active' : ''}}" wx:for="{{regList}}" wx:key="index" bindtap="selectReg" data-index="{{index}}">{{item.filmReName}}</text>
+            </view>
+          </view>
+          <!-- 年份 -->
+          <view class="p-20">
+            <view class="fs-30 fw c-333 pb-20">年份：</view>
+            <view class="item pl-20">
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{yearIndex===-1 ? 'active' : ''}}" bindtap="selectYear" data-index="{{-1}}">全部</text>
+              <text class="c-999 fs-27 br-10 p-10-25 mr-20 mb-20 default {{yearIndex===index ? 'active' : ''}}" wx:for="{{yearList}}" wx:key="index" bindtap="selectYear" data-index="{{index}}">{{item}}</text>
+            </view>
+          </view>
+          <view class="t-right p-20">
+            <text class="bg-e22 c-fff br-10 p-10-25" bindtap="submit">确定</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class="pl-20 pr-20">
+    <navigator wx:for="{{filmList}}" wx:key="index" url="/pages/film/film?filmId={{item.filmId}}" class="film mt-20">
+      <image src="{{item.filmAvat}}" mode="widthFix" class="thumb" />
+      <view class="info bd-b-1 ml-20 pb-20 fs-30 c-999">
+        <view class="fw fs-35 c-333 pb-20">{{item.filmName}}</view>
+        <view>评分：<text class="c-e22">{{item.filmPraise}}</text></view>
+        <view>{{item.filmCateKeyword}}</view>
+        <view>{{item.filmYears}} ，{{item.filmRegionKeyword}}</view>
+        <view>{{item.filmDesc}}</view>
+      </view>
+      <view class="pay bg-e22 c-fff fs-30 p-10-25 br-30">购票</view>
+    </navigator>
+    <view class="c-999 fs-25 p-20" style="text-align: center;">---到底了---</view>
+  </view>
+</view>

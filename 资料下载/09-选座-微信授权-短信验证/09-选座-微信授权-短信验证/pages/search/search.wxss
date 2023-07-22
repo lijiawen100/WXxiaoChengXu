@@ -1,0 +1,24 @@
+.search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search .left{
+  display: flex;
+  flex:.93
+}
+.classify{
+  display: flex;
+  justify-content: space-around;
+}
+.record{
+  margin-top: 50rpx;
+}
+.del{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.del .image{
+  width: 30rpx;height:30rpx;
+}

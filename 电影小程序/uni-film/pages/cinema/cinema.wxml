@@ -1,0 +1,25 @@
+<view class="cinema">
+  <!-- 影院图片 -->
+  <image src="{{cinema.cmaImgs}}" class="image" mode="widthFix" />
+  <!-- 影院标题 -->
+  <view class="p-20 bd-b-1 fs-30 fw c-333">{{cinema.cmaName}}</view>
+  <!-- 影院地址 -->
+  <navigator url="/pages/map/map?cmaAddress={{cinema.cmaAddress}}" class="address p-20 bd-b-1">
+    <image src="../../images/location.png" class="icon mr-10" />
+    <text class="location fs-30 c-333">{{cinema.cmaAddress}}</text>
+    <image src="../../images/art.png" class="icon" />
+  </navigator>
+  <!-- 影院电话 -->
+  <view class="tel p-20" bindtap="call">
+    <image src="../../images/tel.png" class="icon mr-10" />
+    <text class="telephone fs-30 c-659">{{cinema.cmaPhone}}</text>
+  </view>
+  <!-- 特色服务 -->
+  <view class="service p-20">
+    <view class="fs-35 fw c-333 mb-20 bd-b-1 pb-20">特色服务</view>
+    <view class="card-content" wx:if="{{cinema.cmaSepcial}}">
+      <text wx:for="{{cinema.cmaSepcial}}" wx:key="index" class="card c-e22 p-5-15 fs-30 mr-20 mb-20">{{item.spe_name}}</text>
+    </view>
+    <view class="list fs-30 c-999 pb-20 pt-20 bd-b-1" wx:for="{{cinema.cmaService}}" wx:key="index"><text class="fs-27 p-10 card2 mr-20">{{item.ser_name}}</text>{{item.ser_desc}}</view>
+  </view>
+</view>

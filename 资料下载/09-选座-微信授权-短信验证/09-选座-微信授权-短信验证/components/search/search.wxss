@@ -1,0 +1,16 @@
+.comp-search {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  box-sizing: border-box;
+}
+
+.comp-search .bar {
+  display: flex;
+  align-items: center;
+}
+.comp-search .bar .swiper {
+  width: 360rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}

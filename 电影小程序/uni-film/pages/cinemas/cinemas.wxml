@@ -1,0 +1,44 @@
+<view class="filter">
+  <view class="title bg-fff p-20 bd-b-1">
+    <view bindtap="tapBrand">{{brandName}}</view>
+    <view bindtap="tapOrder">{{orderName}}</view>
+    <view bindtap="tapHall">{{specialName}}</view>
+  </view>
+  <view class="model" wx:if="{{showHall || showBrand||showOrder}}" bindtap="showmodel">
+    <view class="brand bg-fff" wx:if="{{showBrand}}">
+      <scroll-view scroll-y class="brandContent">
+        <view bindtap="selectBrand" data-index="{{-1}}" class="fs-30 c-333 m-20">全部</view>
+        <view bindtap="selectBrand" data-index="{{index}}" class="fs-30 c-333 m-20" wx:for="{{brandList}}" wx:key="index">{{item.brandName}}</view>
+      </scroll-view>
+    </view>
+    <view class="order bg-fff" wx:if="{{showOrder}}">
+      <view class="fs-30 c-333 p-20" bindtap="selectOrder" data-index="距离近">距离近</view>
+      <view class="fs-30 c-333 p-20" bindtap="selectOrder" data-index="价格低">价格低</view>
+    </view>
+    <view class="hall bg-fff" wx:if="{{showHall}}">
+      <view class="hall-tag bd-b-1 p-20">
+        <text class="default {{selectIndex ===-1 &&'active'}} m-10" catchtap="selectHall" data-index="{{-1}}">全部</text>
+        <text class="default {{selectIndex === index &&'active'}} m-10" catchtap="selectHall" data-index="{{index}}" wx:for="{{hallList}}" wx:key="index">{{item.specialName}}</text>
+      </view>
+      <view class="t-right p-20">
+        <text catchtap="submitHall" class="bg-e22 c-fff fs-30 p-5-15 br-10">确定</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <navigator class="bd-b-1 p-20" wx:for="{{cinemaList}}" wx:key="index" url="/pages/cinema/cinema?cmaId={{item.cmaId}}">
+    <view class="name mb-20">
+      <view class="c-333 fs-30 fw">{{item.cmaName}}</view>
+      <view class="fs-27 c-999"><text class="fs-30 c-e22">{{item.cmaCost}}元</text>起</view>
+    </view>
+    <view class="address mb-20 c-999 fs-27">
+      <text>{{item.cmaAddress}}</text>
+      <text>{{item.cmaAway}}</text>
+    </view>
+    <view class="service mb-20">
+      <text wx:for="{{item.cmaService}}" wx:key="index" class="fs-27 p-5-15 s{{index%2}} mr-20">{{item.ser_name}}</text>
+    </view>
+  </navigator>
+  <view class="t-center fs-27 c-999 p-20" wx:if="{{page===-1}}">----我也是有底线的----</view>
+</view>

@@ -1,0 +1,33 @@
+<view class="orders bg-efe" style="height: 100vh">
+  <view class="order-item bg-fff p-20" wx:if="{{cinema.length!==0&&film.length!==0&&selectList.length!==0&&watch.length!==0}}">
+    <!-- 影院信息 -->
+    <view class="cinema bd-b-1 pb-20">
+      <text class="c-999 fs-27">{{cinema.cmaName}}</text>
+      <text class="c-999 fs-25">已完成</text>
+    </view>
+    <!-- 电影信息 -->
+    <view wx:if="{{film}}" class="film mt-20 bd-b-1 pb-20">
+      <view class="left">
+        <image src="{{filmIMG+film.filmAvat}}" mode="heightFix" class="image" />
+        <view class="film-info">
+          <view class="name fs-27 c-333 fw">{{film.filmName}} {{selectList.length}}张</view>
+          <view class="c-999 fs-25">{{film.filmYears}}年{{watch.wdDate}}日{{watch.wtBegintime}}</view>
+          <view class="c-999 fs-25">
+            <text class="mr-10">{{watch.wtHalls}}</text>
+            <text wx:for="{{selectList}}" class="mr-10" wx:key="index">{{item.site_row}}排{{item.site_colum}}座</text>
+          </view>
+        </view>
+      </view>
+
+      <view>
+        <text class="bg-e22 c-fff br-40 p-10-25 fs-25">评价影片</text>
+      </view>
+    </view>
+    <!-- 价格信息 -->
+    <view class="mt-20 price c-999 fs-25">
+      <text>总价：{{selectList.length*watch.wtCost}}元</text>
+      <text class="del c-999 br-40 p-10-25 fs-25" bindtap="delorder">删除订单</text>
+    </view>
+  </view>
+  <view class="t-center mt-20 p-20 fs-25 c-333">如果您有未展示的订单，可查看<text class="c-e22">更早的订单></text></view>
+</view>

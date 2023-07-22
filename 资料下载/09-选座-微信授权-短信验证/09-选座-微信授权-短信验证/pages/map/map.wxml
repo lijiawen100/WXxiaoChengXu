@@ -1,0 +1,2 @@
+<map longitude="{{lng}}" latitude="{{lat}}" class="map" markers="{{markers}}"></map>
+<view class="goway bg-e22 c-fff fs-40 t-center p-20" bindtap="goway">到这里去</view>

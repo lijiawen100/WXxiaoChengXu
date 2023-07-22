@@ -1,0 +1,121 @@
+.poster {
+  display: flex;
+  align-items: center;
+}
+.poster .thumb {
+  height: 310rpx;
+  width: 220rpx;
+}
+.poster .des {
+  flex: 1;
+}
+.poster .des .btn {
+  display: flex;
+  justify-content: space-between;
+}
+.poster .des .btn .text {
+  padding: 10rpx 80rpx;
+}
+
+.desc-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc-header .slide {
+  display: flex;
+  align-items: center;
+}
+.desc-header .slide .arrow {
+  width: 30rpx;
+  height: 30rpx;
+  transform: rotate(90deg);
+  transition: all ease 0.5s;
+}
+.desc-body {
+  transition: all ease 0.5s;
+}
+.desc-body .text {
+  line-height: 50rpx;
+}
+.actor-header {
+  display: flex;
+  justify-content: space-between;
+}
+.actor-list {
+  display: flex;
+}
+.actor-list .item {
+  line-height: 30rpx;
+}
+.actor-list .item .photo {
+  height: 200rpx;
+  width: 100rpx;
+}
+
+.attr {
+  display: flex;
+}
+.attr .icon {
+  width: 30rpx;
+  height: 30rpx;
+  /* 不允许flex元素被压缩 */
+  flex-shrink: 0;
+}
+.stills {
+  white-space: nowrap;
+}
+.stills .image {
+  height: 200rpx;
+}
+
+.cmmt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cmmt-header .create {
+  display: flex;
+  align-items: center;
+}
+.cmmt-header .image {
+  height: 30rpx;
+  width: 30rpx;
+}
+.cmmt-body .cmmt-item {
+  display: flex;
+}
+.cmmt-body .cmmt-item .icon {
+  height: 100rpx;
+  width: 100rpx;
+}
+.cmmt-body .cmmt-item .cinfo {
+  flex: 1;
+}
+.cmmt-body .cmmt-item .good {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20rpx;
+}
+.cmmt-body .cmmt-item .good .image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.pay {
+  position: fixed;
+  width: 100vw;
+  height: 90rpx;
+  left: 0;
+  bottom: 0;
+  line-height: 90rpx;
+}
+
+.pay .text {
+  padding: 10rpx 200rpx;
+}
+
+.cmmt {
+  padding-bottom: 130rpx;
+}

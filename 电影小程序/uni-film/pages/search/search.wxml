@@ -1,0 +1,22 @@
+<view class="m-20">
+  <view class="search-bar">
+    <view class="bg-efe p-10-25 br-40 search-input">
+      <icon type="search" />
+      <input type="text" value="{{keywords}}" bindinput="setKeywords" class="ml-20" placeholder="请输入关键字" />
+    </view>
+    <view class="c-e22 fs-30" bindtap="submit">确定</view>
+  </view>
+  <view class="classify mt-20">
+    <text class="{{classifyIndex===index? 'bg-e22 c-fff':'bg-efe c-333'}} p-10-25 br-30 fs-30" wx:for="{{classify}}" wx:key="index" bindtap="setClassifyIndex" data-index="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="searchHistory">
+    <text class="fs-35 c-333 mt-20">搜索历史：</text>
+    <view class="keywords m-20">
+      <text class="m-20 c-999 fs-27" wx:for="{{record}}" wx:key="index" bindtap="setKeywordsFromRecord" data-index="{{index}}">{{item}}</text>
+    </view>
+  </view>
+  <view class="del">
+    <image src="/images/del.png" class="image" />
+    <text bindtap="clear" class=" fs-27 c-999">全部清除</text>
+  </view>
+</view>

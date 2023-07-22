@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit">
+  <input type="number" name="tel" placeholder="请输入电话号码" class="input bd-b-1 p-20" bindinput="setTel" />
+  <view class="code p-20">
+    <input type="text" name="yzm" class="input bd-b-1" value="{{code}}" />
+    <text class="c-999" bindtap="getYzm">获取验证码</text>
+  </view>
+  <button class="bg-e22 c-fff fw mt-20" form-type="submit">确定</button>
+</form>

@@ -1,0 +1,15 @@
+.comp-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comp-card-body {
+  display: flex;
+}
+.comp-card-body .item {
+  height: 370rpx;
+}
+.comp-card-body .item .image {
+  width: 175rpx;
+  height: 250rpx;
+}

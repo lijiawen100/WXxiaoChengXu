@@ -1,0 +1,78 @@
+<view class="seat-select bg-efe" style="height: 100vh;">
+  <!-- 当前影院 -->
+  <view class="cinema bg-fff p-20">
+    <view class="left mr-20 bd-r-1 pr-20">
+      <view class="c-333 fw fs-30">{{cinema.cmaName}}</view>
+      <view class="c-999 fs-27">{{cinema.cmaAddress}}</view>
+    </view>
+    <image class="right" src="/images/location.png"></image>
+  </view>
+  <!-- 当前电影 -->
+  <view wx:if="{{film}}" class="film m-20 p-20 bg-fff br-10">
+    <image src="{{filmIMG+film.filmAvat}}" mode="heightFix" class="poster mr-20" />
+    <view class="text">
+      <view class="title">
+        <text class="fw c-333 fs-30 m-20">{{film.filmName}}</text>
+        <text class="c-daa fw fs-30">{{film.filmPraise}}</text>
+        <text class="c-daa fw fs-27">分</text>
+      </view>
+      <view class="info fs-27 c-999">
+        {{film.filmTimelong}} | {{film.filmCateKeyword}} | {{film.filmRegionKeyword}}
+      </view>
+      <view class="price fs-50 c-e22 fw t-right">￥ {{watch.wtCost}}</view>
+    </view>
+  </view>
+  <!-- 座位 -->
+  <view class="bg-fff c-999 fs-30 p-20">
+    <!-- 图示 -->
+    <view class="illustration p-20">
+      <view class="item">
+        <image src="/images/seat01.png" mode="heightFix" class="icon" />
+        <text>可选</text>
+      </view>
+      <view class="item">
+        <image src="/images/seat02.png" mode="heightFix" class="icon" />
+        <text>已售</text>
+      </view>
+      <view class="item">
+        <image src="/images/seat03.png" mode="heightFix" class="icon" />
+        <text>已选</text>
+      </view>
+      <view class="item">
+        <image src="/images/seat04.png" mode="heightFix" class="icon" />
+        <text>情侣</text>
+      </view>
+    </view>
+    <!-- 场地 -->
+    <scroll-view class="scene" scroll-x>
+      <!-- 屏幕 -->
+      <view class="monitor t-center">
+        <image src="/images/monitor.png" mode="heightFix" class="image" />
+      </view>
+      <!-- 座位 -->
+      <view class="seat-info">
+        <!-- row -->
+        <view class="row" wx:for="{{watch.wtCostSites}}" wx:key="index" wx:for-index="rindex">
+          <!-- col -->
+          <view class="col" wx:for="{{item.colums}}" wx:key="index">
+            <!-- site_state: 0 无 1可选 2已售 3已选 4情侣-->
+            <view class="empty" wx:if="{{item.site_state==='0'}}"></view>
+            <image mode="heightFix" bindtap="select" data-row="{{rindex}}" data-col="{{index}}" class="image" src="/images/seat0{{item.checked ? '3' : '1'}}.png" wx:if="{{item.site_state==='1'}}"></image>
+            <image mode="heightFix" class="image" src="/images/seat02.png" wx:if="{{item.site_state==='2'}}">2</image>
+            <image mode="heightFix" class="image" src="/images/seat04.png" wx:if="{{item.site_state==='4'}}">4</image>
+
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 状态栏 -->
+  <view class="c-fff fs-35 bg-e22 m-20 p-20 br-10">
+    <view wx:if="{{selectList.length}}" class="status">
+      <view>{{selectList.length}}张</view>
+      <view>￥{{selectList.length * watch.wtCost}}</view>
+      <view bindtap="pay">立即购买</view>
+    </view>
+    <view wx:else class="t-center c-999">请选择座位</view>
+  </view>
+</view>

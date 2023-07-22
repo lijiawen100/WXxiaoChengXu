@@ -1,0 +1,16 @@
+.comp-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comp-card__body {
+  display: flex;
+}
+.comp-card__body .item {
+  height: 360rpx;
+}
+
+.comp-card__body .item .img {
+  width: 175rpx;
+  height: 250rpx;
+}

@@ -1,0 +1,16 @@
+.mine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+}
+.mine .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mine .avatar .icon {
+  width: 150rpx;
+  height: 150rpx;
+}

@@ -1,0 +1,69 @@
+<view class="bg-efe" style="padding-top: {{headerHeight}}px">
+  <view class="header bg-e22" id="header">
+    <status-bar></status-bar>
+    <search></search>
+  </view>
+  <view class="scroll">
+    <view class="bg-linear"></view>
+    <swiper class="swiper ml-20 mr-20 br-20" autoplay>
+      <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <navigator url="/pages/film/film?filmId={{item.filmId}}">
+          <image class="image" src="{{indexIMG + item.filmImage}}" mode="aspectFill" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+    <view class="bg-fff m-20 p-20 br-20">
+      <view class="grid">
+        <navigator class="navigator">
+          <image src="{{indexIMG}}ico1.png" class="image" />
+          <view class="c-333 fs-30">电影</view>
+        </navigator>
+        <navigator class="navigator">
+          <image src="{{indexIMG}}ico2.png" class="image" />
+          <view class="c-333 fs-30">影院</view>
+        </navigator>
+        <navigator class="navigator">
+          <image src="{{indexIMG}}ico3.png" class="image" />
+          <view class="c-333 fs-30">放映厅</view>
+        </navigator>
+        <navigator class="navigator">
+          <image src="{{indexIMG}}ico4.png" class="image" />
+          <view class="c-333 fs-30">小说</view>
+        </navigator>
+        <navigator class="navigator">
+          <image src="{{indexIMG}}ico5.png" class="image" />
+          <view class="c-333 fs-30">剧集介绍</view>
+        </navigator>
+      </view>
+      <scroll-view scroll-x="true" class="mt-20">
+        <view class="panel">
+          <navigator wx:for="{{10}}" wx:key="index" class="navigator br-20 mr-20 p-20">
+            <view class="c-333 fs-30">省钱月卡</view>
+            <view class="c-999 fs-27">观影立减</view>
+            <image src="{{indexIMG}}icotj.png" class="image" />
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- <view>热映</view> -->
+    <card title="正在热映" count="{{hotList.length}}" data="{{hotList}}"></card>
+    <!-- <view>上映</view> -->
+    <card title="即将上映" count="{{readyList.length}}" data="{{readyList}}"></card>
+    <!-- <view>推荐</view> -->
+    <view class="m-20 comon">
+      <navigator class="item p-20 bg-fff br-20 mb-20" wx:for="{{commData}}" wx:key="index" url="/pages/film/film?filmId={{item.filmId}}">
+        <image class="image" src="{{indexIMG+item.film_cover_image}}" mode="widthFix" />
+        <view class="name fs-30 c-333 fw">{{item.film_name}}</view>
+        <view class="type">
+          <text class="mr-10 c-999 fs-27" wx:for="{{item.category_list}}" wx:key="index">{{item.category_name}}</text>
+        </view>
+        <view class="area">
+          <text class="mr-10 c-999 fs-27" wx:for="{{item.country_list}}" wx:key="index">{{item.country_name}}</text>
+        </view>
+        <view class="c-e22 fs-30 fw rank">{{item.film_rank}}分</view>
+      </navigator>
+    </view>
+  </view>
+  <image wx:if="{{isShow}}" bindtap="gotop" src="../../images/top.png" class=" totop bg-fff br-circ">
+  </image>
+</view>

@@ -1,0 +1,11 @@
+<view class="comp-search pl-20 pr-20">
+  <view class="c-fff fs-30" bindtap="city">{{selectCity}}</view>
+  <navigator url="/pages/search/search" class="bar ml-20 bg-fff br-40 p-5-15">
+    <icon type="search" />
+    <swiper class="swiper c-333 fs-27" autoplay circular vertical>
+      <swiper-item wx:for="{{list}}" wx:key="index">
+        {{item}}
+      </swiper-item>
+    </swiper>
+  </navigator>
+</view>

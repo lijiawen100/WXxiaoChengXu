@@ -1,0 +1,50 @@
+<view class="tick-cinema bg-efe" style="height: 100vh;">
+  <!-- 当前电影 -->
+  <view class="poster bg-fff p-20" wx:if="{{film}}">
+    <image src="{{filmIMG+film.filmAvat}}" mode="heightFix" class="thumb br-10" />
+    <view class="des ml-20">
+      <view class="fs-35 fw c-333">{{film.filmName}}</view>
+      <view class="fs-27 c-999">{{film.filmRealName}}</view>
+      <view class="fs-27 c-999">
+        <view>{{film.filmYears}} / {{film.filmRegionKeyword}}</view>
+        <view>{{film.filmCateKeyword}}</view>
+        <view>{{film.filmShowPlace}} / {{film.filmTimelong}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 支持的放映的影院 -->
+  <scroll-view scroll-y class="pt-20" style="height: 30vh;">
+    <view wx:for="{{cinemaList}}" wx:key="index" class="cinema m-20 p-20 bg-fff br-10">
+      <view class="pr-20">
+        <view class="fs-35 c-333 fw">{{item.cmaName}}</view>
+        <view class="fs-27 c-999">{{item.cmaAddress}}</view>
+      </view>
+      <text class="watch bg-e22 br-30 c-fff p-5-15" bindtap="selectWatch" data-index="{{index}}">场次</text>
+    </view>
+
+  </scroll-view>
+  <!-- 场次 -->
+  <view wx:if="{{cinemaIndex!==-1}}" bindtap="close" class="scene">
+    <view class="bg-fff fs-30 p-20 ml-20 mr-20" catchtap="nothing">
+      <view>{{cinemaList[cinemaIndex].cmaName}}</view>
+      <scroll-view scroll-y style="height: 700rpx;">
+        <view wx:for="{{watchList}}" wx:key="index" class="p-20">
+          <view class="fw">{{item.wdDate}}</view>
+          <view class="info bd-b-1 pb-20">
+            <view class="time">
+              <view class="fs-50 c-333 fw">{{item.wtBegintime}}</view>
+              <view class="fs-27 c-999">{{item.wtEndtime}}</view>
+            </view>
+            <view class="type">
+              <view class="fs-40 c-333">{{item.wtVersion}}</view>
+              <view class="fs-27 c-999">{{item.wtHalls}}</view>
+            </view>
+            <view class="price fs-50 c-e22">{{item.wtCost}}元</view>
+            <navigator url="/pages/seat-selection/seat-selection?wtId={{item.wtId}}" class="pay fs-35 c-e22 p-10-25 br-40">购票</navigator>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+</view>

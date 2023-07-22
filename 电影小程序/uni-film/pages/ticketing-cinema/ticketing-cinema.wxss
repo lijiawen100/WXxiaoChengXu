@@ -1,0 +1,36 @@
+.ticket .poster {
+  display: flex;
+}
+.ticket .poster .content {
+  flex: 1;
+}
+.poster .image {
+  height: 240rpx;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .session {
+  flex-shrink: 0;
+}
+.model {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 100rpx;
+}
+.model .watch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.watch .pay{
+  border: 1px solid #ee2222;
+  
+}

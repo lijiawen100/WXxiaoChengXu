@@ -1,0 +1,42 @@
+.img {
+  width: 100vw;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.address .text {
+  flex: 1;
+}
+.location,
+.tel .img,
+.art {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+}
+.service {
+  border-top: 30rpx solid #eee;
+}
+.spe {
+  padding-bottom: 40rpx;
+  border-bottom: 20rpx solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+}
+.spe .text {
+  border: 1rpx solid #e22d2c;
+}
+.list {
+  line-height: 50rpx;
+}
+.list .name {
+  border: 1rpx solid #099710;
+  color: #099710;
+}

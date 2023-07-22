@@ -1,0 +1,90 @@
+<view class="film bg-efe" wx:if="{{film}}">
+  <!-- 封面 -->
+  <view class="poster bg-fff p-20">
+    <image src="{{filmIMG+film.filmAvat}}" mode="heightFix" class="image br-10 mr-20" />
+    <view class="content fs-27 c-999">
+      <view class="fs-35 fw c-333 mb-20">{{film.filmName}}</view>
+      <view class="mb-20">{{film.filmRealName}}</view>
+      <view class="mb-20">
+        <view>{{film.filmYears}}/{{film.filmRegionKeyword}}</view>
+        <view>{{film.filmCateKeyword}}</view>
+        <view>{{film.filmShowPlace}}/{{film.filmTimelong}}</view>
+      </view>
+      <view class="btn">
+        <text class="text bg-e22 c-fff fs-35 p-5-30 br-10 t-center">想看</text>
+        <text class="text bg-e22 c-fff fs-35 p-5-30 br-10 t-center">看过</text>
+      </view>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class="m-20 p-20 bg-fff br-10">
+    <view class="title bd-b-1" bindtap="controShowDesc">
+      <view class="fw c-333 fs-35">简介:</view>
+      <view class="open fs-30 c-999">
+        <text>{{showDesc?"收起":"展开"}}</text>
+        <image src="../../images/art.png" class="icon ml-20" style="transform:rotate({{showDesc?-90:90}}deg)" />
+      </view>
+    </view>
+    <scroll-view class="scroll  pt-20 c-999 fs-27" style="max-height: {{showDesc?350:80}}rpx" scroll-y>
+      {{film.filmDesc}}
+    </scroll-view>
+  </view>
+  <!-- 演员 -->
+  <view class="actors bg-fff m-20 p-20 br-10">
+    <view class="title">
+      <view class="c-333 fs-35 fw">演员:</view>
+      <view class="c-999 fs-30">全部{{film.filmActors[1].content.length}}人</view>
+    </view>
+    <scroll-view scroll-x>
+      <view class="body">
+        <view wx:for="{{film.filmActors[1].content}}" wx:key="index">
+          <image src="{{actIMG+item.act_img}}" mode="heightFix" class="image mr-10 br-10" />
+          <text class="c-333 fs-25">{{item.act_name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+  <!-- 属性 -->
+  <view wx:for="{{film.filmAttribute}}" wx:key="index" class="attr bg-fff m-20 p-20 br-10">
+    <image src="{{attrIMG+item.attr_img}}" class="image mr-20" />
+    <view class="text fs-25 c-999">{{item.attr_text}}</view>
+  </view>
+  <!-- 剧照 -->
+  <view class="bg-fff p-20 m-20 br-10 ">
+    <scroll-view scroll-x="true" class="stills">
+      <image wx:for="{{film.filmImgs}}" wx:key="index" src="{{fIMG+item.img_url}}" class="image mr-10" mode="heightFix" bindtap="showImage" data-index="{{index}}" />
+    </scroll-view>
+  </view>
+
+  <!-- 评论 -->
+  <view class="comm bg-fff p-20">
+    <view class="comm-header">
+      <view class="c-333 fs-30 fw">用户评论</view>
+      <view class="c-999 fs-27 right">
+        <text>我要评论</text>
+        <image src="../../images/edit.png" class="image" />
+      </view>
+    </view>
+    <view wx:if="{{commentList.length===0}}" class="c-999 fs-30 t-center p-20">---暂无评论---</view>
+    <view class="comm-body p-20" wx:for="{{commentList}}" wx:key="index">
+      <!-- 用户头像 -->
+      <image src="{{custIMG+item.custAvat}}" class="image br-circ" />
+      <!-- 评论内容 -->
+      <view class="info ml-20 bd-b-1">
+        <view class="pt-20 fw c-333">{{item.custName}}</view>
+        <view class="mt-10 c-daa fs-30 fw">{{item.cmmtScore}}分</view>
+        <view class="c-999 fs-27">{{item.cmmtCreatetime}}</view>
+        <view class="pb-20 c-999 fs-27">{{item.cmmtDesc}}</view>
+      </view>
+      <!-- 点赞 -->
+      <view class="good-count">
+        <image src="../../images/good.png" class="good" />
+        <text class="c-e22">{{item.cmmtGood}}</text>
+      </view>
+    </view>
+    <view wx:if="{{page===-1&&commentList.length!==0}}" class="c-999 fs-30 t-center p-20">---到底了---</view>
+  </view>
+  <!-- 特惠购票 -->
+  <view class="buy bg-efe t-center"><text class="pay fs-35 bg-e22  c-fff br-10" bindtap="topay">特惠购票</text></view>
+</view>

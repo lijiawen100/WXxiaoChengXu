@@ -1,0 +1,108 @@
+.film .poster {
+  display: flex;
+}
+.film .poster .content {
+  flex: 1;
+}
+.poster .image {
+  height: 310rpx;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+}
+.btn .text {
+  flex: 0.45;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65rpx;
+}
+.title .open {
+  display: flex;
+  align-items: center;
+}
+.title .open .icon {
+  width: 30rpx;
+  height: 30rpx;
+  transition: all ease 0.5s;
+}
+.scroll {
+  line-height: 40rpx;
+  transition: all ease 0.2s;
+}
+.actors .body {
+  display: flex;
+}
+.actors .body .image {
+  height: 200rpx;
+}
+.attr {
+  display: flex;
+}
+.attr .image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.attr .text {
+  flex: 1;
+  line-height: 35rpx;
+}
+.stills {
+  white-space: nowrap;
+}
+.image {
+  height: 200rpx;
+}
+.comm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comm-header .right .image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.comm {
+  padding-bottom: 100rpx;
+}
+.comm-header .right {
+  display: flex;
+  align-items: center;
+}
+.comm-body {
+  display: flex;
+  position: relative;
+}
+.comm-body .image {
+  width: 130rpx;
+  height: 130rpx;
+}
+.comm-body .info {
+  flex: 1;
+}
+.comm-body .good-count {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.comm-body .good-count .good {
+  width: 50rpx;
+  height: 50rpx;
+}
+.buy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.buy .pay {
+  padding: 10rpx 100rpx;
+}

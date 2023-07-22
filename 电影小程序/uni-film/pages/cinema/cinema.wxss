@@ -1,0 +1,39 @@
+.cinema .image {
+  width: 100vw;
+}
+.cinema .icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.cinema .address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.address .location {
+  flex: 1;
+}
+.cinema .tel {
+  display: flex;
+  align-items: center;
+  border-bottom: 30rpx solid #efefef;
+}
+.tel .telephone {
+  flex: 1;
+}
+
+.card-content {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 30rpx solid #efefef;
+}
+.service .card-content .card {
+  border: 1px solid #ee2222;
+}
+.service .card2 {
+  border: 1px solid rgb(157, 190, 107);
+  color: rgb(157, 190, 107);
+}
+.list {
+  line-height: 50rpx;
+}

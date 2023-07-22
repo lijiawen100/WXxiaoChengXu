@@ -1,0 +1,57 @@
+<view class="ticket bg-efe" style="height: 100vh">
+  <!-- 电影封面 -->
+  <view class="poster bg-fff p-20" wx:if="{{film}}">
+    <!-- 电影图片 -->
+    <image src="{{filmIMG+film.filmAvat}}" mode="heightFix" class="image br-10 mr-20" />
+    <!-- 电影内容 -->
+    <view class="content fs-27 c-999">
+      <view class="fs-35 fw c-333 mb-20">{{film.filmName}}</view>
+      <view class="mb-20">{{film.filmRealName}}</view>
+      <view class="mb-20">
+        <view>{{film.filmYears}}/{{film.filmRegionKeyword}}</view>
+        <view>{{film.filmCateKeyword}}</view>
+        <view>{{film.filmShowPlace}}/{{film.filmTimelong}}</view>
+      </view>
+
+    </view>
+  </view>
+  <!-- 支持放映的影院列表 -->
+  <scroll-view scroll-y class=" mt-20" style="height: 30vh">
+    <view class="list m-20 p-20 bg-fff" wx:for="{{cinemaList}}" wx:key="index">
+      <view>
+        <view class="fs-35 fw c-333">{{item.cmaName}}</view>
+        <view class="fs-27 c-999">{{item.cmaAddress}}</view>
+      </view>
+      <view class="session bg-e22 c-fff fs-30 br-40 p-5-15 ml-20" bindtap="selectWatch" data-index="{{index}}">场次</view>
+    </view>
+  </scroll-view>
+  <!-- 模态框 -->
+  <view class="model" wx:if="{{cinemaIndex!==-1}}" bindtap="close">
+    <view class="p-20 bg-fff ml-20 mr-20" catchtap="nothing">
+      <view class="title fs-35 c-333">
+        {{cinemaList[cinemaIndex].cmaName}}
+      </view>
+      <scroll-view scroll-y="true" style="height: 700rpx">
+        <view wx:for="{{watchList}}" wx:key="index" class=" bd-b-1 p-20">
+          <view class="c-333 fw fs-30 mb-10">{{item.wdDate}}</view>
+          <view class="watch">
+            <view class="date">
+              <view class="fs-40 fw c-333">{{item.wtBegintime}}</view>
+              <view class="c-999 fs-27">{{item.wtEndtime}}</view>
+            </view>
+            <view class="type ml-10 mr-10">
+              <view class="fs-35 c-333">{{item.wtVersion}}</view>
+              <view class="c-999 fs-30">{{item.wtHalls}}</view>
+            </view>
+            <view class="price fs-50 c-e22">
+              {{item.wtCost}}元
+            </view>
+            <navigator url="/pages/seat-selection/seat-selection?wtId={{item.wtId}}" class="pay c-e22 fs-30 br-40 p-10-25 ml-10">
+              购票
+            </navigator>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

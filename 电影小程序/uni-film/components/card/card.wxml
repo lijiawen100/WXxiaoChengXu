@@ -1,0 +1,19 @@
+<view class="bg-fff m-20 p-20 br-20">
+  <view class="comp-card-head">
+    <view class="fs-35 c-333 fw">{{title}}</view>
+    <view class="fs c-999">全部{{count}}部></view>
+  </view>
+  <scroll-view scroll-x="true" class="mt-20">
+    <view class="comp-card-body">
+      <view wx:for="{{data}}" wx:key="index" class="mr-20 t-center item">
+        <navigator url="/pages/film/film?filmId={{item.filmId}} " class="mb-10">
+          <image class="image br-15" src="{{indexIMG+item.filmImage}}" />
+          <view class="c-333 fs-35">{{item.filmName}}</view>
+        </navigator>
+        <text wx:if="{{item.type===1}}" class="bg-e22 c-fff p-5-30 fs-30 br-30">购票</text>
+        <text wx:elif="{{item.type===2}}" class="bg-659 c-fff p-5-30 fs-30 br-30 ">预售</text>
+        <text wx:else="{{item.type===3}}" class="bg-daa c-fff p-5-30 fs-30 br-30 ">想看</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

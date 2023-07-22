@@ -1,0 +1,63 @@
+.cinema-location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location-icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+.film {
+  display: flex;
+}
+.film .cinema-info {
+  flex: 1;
+}
+.film .poster {
+  height: 220rpx;
+}
+.seat-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.seat-icon .item {
+  display: flex;
+  align-items: center;
+}
+.seat-icon .image {
+  height: 40rpx;
+}
+.screen {
+  height: 40rpx;
+}
+.selectSeats {
+  margin-top: 80rpx;
+}
+.rows {
+  display: flex;
+  justify-content: center;
+}
+
+.cols .empty,
+.cols .image {
+  height: 40rpx;
+  width: 40rpx;
+  margin-right: 5rpx;
+  margin-bottom: 5rpx;
+}
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.status-info {
+  display: flex;
+  justify-content: space-between;
+}
+.status-info .item{
+  flex: 1;
+}
